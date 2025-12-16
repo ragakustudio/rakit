@@ -1,0 +1,31 @@
+{
+  "name": "rakit",
+  "version": "1.0.0",
+  "description": "**“RAKIT bukan untuk terlihat cepat, tapi untuk bertahan lama.”**",
+  "main": "index.js",
+  "directories": {
+    "doc": "docs"
+  },
+  "scripts": {
+    "build": "postcss src/index.css -o dist/rakit.css",
+    "watch": "postcss src/index.css -o dist/rakit.css --watch"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ragakustudio/rakit.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ragakustudio/rakit/issues"
+  },
+  "homepage": "https://github.com/ragakustudio/rakit#readme",
+  "devDependencies": {
+    "@tailwindcss/postcss": "^4.1.18",
+    "autoprefixer": "^10.4.23",
+    "postcss": "^8.5.6",
+    "postcss-cli": "^11.0.1",
+    "tailwindcss": "^4.1.18"
+  }
+}

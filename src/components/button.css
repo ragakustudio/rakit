@@ -1,0 +1,152 @@
+/* =========================================================
+   RAKIT BUTTON — v1.1
+   Contract locked, visual & UX polished
+   ========================================================= */
+
+/* ---------------------------------------------------------
+   BASE
+--------------------------------------------------------- */
+.rk-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+
+  font-family: inherit;
+  font-weight: 500;
+  line-height: 1;
+
+  border-radius: 8px;
+  border: 1px solid transparent;
+
+  cursor: pointer;
+  user-select: none;
+  white-space: nowrap;
+
+  transition:
+    background-color .15s ease,
+    color .15s ease,
+    border-color .15s ease,
+    box-shadow .15s ease,
+    opacity .15s ease;
+}
+
+/* ---------------------------------------------------------
+   SIZE
+--------------------------------------------------------- */
+.rk-btn--sm { height: 32px; padding: 0 12px; font-size: 13px; }
+.rk-btn--md { height: 40px; padding: 0 16px; font-size: 14px; }
+.rk-btn--lg { height: 48px; padding: 0 20px; font-size: 15px; }
+
+.rk-btn--icon {
+  width: 40px;
+  padding: 0;
+}
+
+/* ---------------------------------------------------------
+   VARIANT
+--------------------------------------------------------- */
+.rk-btn--solid {
+  background-color: var(--rk-btn-bg);
+  color: var(--rk-btn-text);
+}
+
+.rk-btn--outline {
+  background: transparent;
+  border-color: var(--rk-btn-border);
+  color: var(--rk-btn-border);
+}
+
+.rk-btn--ghost {
+  background: transparent;
+  color: var(--rk-btn-text);
+}
+
+.rk-btn--text {
+  background: none;
+  border: none;
+  padding: 0;
+  height: auto;
+  color: var(--rk-btn-text);
+}
+
+/* ---------------------------------------------------------
+   SEMANTIC (POLISHED COLORS)
+--------------------------------------------------------- */
+.rk-btn--primary {
+  --rk-btn-bg: #272727;
+  --rk-btn-text: #ffffff;
+  --rk-btn-border: #272727;
+}
+
+.rk-btn--secondary {
+  --rk-btn-bg: #f4f4f5;
+  --rk-btn-text: #18181b;
+  --rk-btn-border: #d4d4d8;
+}
+
+.rk-btn--neutral {
+  --rk-btn-bg: #ffffff;
+  --rk-btn-text: #18181b;
+  --rk-btn-border: #d4d4d8;
+}
+
+.rk-btn--danger {
+  --rk-btn-bg: #dc2626;
+  --rk-btn-text: #ffffff;
+  --rk-btn-border: #dc2626;
+}
+
+.rk-btn--success {
+  --rk-btn-bg: #16a34a;
+  --rk-btn-text: #ffffff;
+  --rk-btn-border: #16a34a;
+}
+
+.rk-btn--warning {
+  --rk-btn-bg: #f59e0b;
+  --rk-btn-text: #18181b;
+  --rk-btn-border: #f59e0b;
+}
+
+.rk-btn--info {
+  --rk-btn-bg: #0284c7;
+  --rk-btn-text: #ffffff;
+  --rk-btn-border: #0284c7;
+}
+
+/* ---------------------------------------------------------
+   STATES
+--------------------------------------------------------- */
+.rk-btn:hover:not(.is-disabled):not(.is-loading) {
+  filter: brightness(0.95);
+}
+
+.rk-btn:active:not(.is-disabled):not(.is-loading) {
+  filter: brightness(0.9);
+}
+
+.rk-btn:focus-visible {
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(39,39,39,.25);
+}
+
+.rk-btn.is-disabled,
+.rk-btn:disabled {
+  opacity: .5;
+  cursor: not-allowed;
+  pointer-events: none;
+}
+
+.rk-btn.is-loading {
+  pointer-events: none;
+  opacity: .7;
+}
+
+/* ---------------------------------------------------------
+   ICON / LOADING
+--------------------------------------------------------- */
+.rk-btn__icon {
+  display: inline-flex;
+  align-items: center;
+}

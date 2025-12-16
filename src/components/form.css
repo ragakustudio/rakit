@@ -1,0 +1,50 @@
+/* =========================================================
+   RAKIT FORM LAYOUT — v1.0
+   ========================================================= */
+
+/* ---------------------------------------------------------
+   FORM STACK (DEFAULT)
+--------------------------------------------------------- */
+.rk-form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+/* ---------------------------------------------------------
+   INLINE FIELD (LABEL + INPUT SEJAJAR)
+--------------------------------------------------------- */
+.rk-field--inline {
+  display: grid;
+  grid-template-columns: 160px 1fr;
+  align-items: center;
+  gap: 16px;
+}
+
+.rk-field--inline .rk-label {
+  margin-bottom: 0;
+}
+
+/* ---------------------------------------------------------
+   FORM GRID (2–3 COLUMN)
+--------------------------------------------------------- */
+.rk-form--grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+}
+
+/* 3 column variant */
+.rk-form--grid-3 {
+  grid-template-columns: repeat(3, 1fr);
+}
+
+/* ---------------------------------------------------------
+   FORM ACTIONS (BUTTON AREA)
+--------------------------------------------------------- */
+.rk-form-actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 12px;
+  margin-top: 8px;
+}

@@ -1,0 +1,236 @@
+/* =========================================================
+   RAKIT INPUT — v1.0
+   Contract-first, system-aligned
+   ========================================================= */
+
+/* ---------------------------------------------------------
+   WRAPPER
+--------------------------------------------------------- */
+.rk-field {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+/* Size sync with Button */
+.rk-field--sm .rk-input { height: 32px; font-size: 13px; }
+.rk-field--md .rk-input { height: 40px; font-size: 14px; }
+.rk-field--lg .rk-input { height: 48px; font-size: 15px; }
+
+/* ---------------------------------------------------------
+   LABEL
+--------------------------------------------------------- */
+.rk-label {
+  font-size: 13px;
+  font-weight: 500;
+  color: #18181b;
+}
+
+/* ---------------------------------------------------------
+   INPUT BASE
+--------------------------------------------------------- */
+.rk-input {
+  width: 100%;
+  padding: 0 12px;
+
+  font-family: inherit;
+  font-size: inherit;
+  line-height: 1;
+
+  border-radius: 8px;
+  border: 1px solid #d4d4d8;
+  background-color: #ffffff;
+  color: #18181b;
+
+  transition:
+    border-color .15s ease,
+    box-shadow .15s ease,
+    background-color .15s ease;
+}
+
+/* ---------------------------------------------------------
+   STATES
+--------------------------------------------------------- */
+.rk-input::placeholder {
+  color: #a1a1aa;
+}
+
+/* Focus */
+.rk-input:focus {
+  outline: none;
+  border-color: #272727;
+  box-shadow: 0 0 0 3px rgba(39,39,39,.2);
+}
+
+/* Disabled */
+.rk-field.is-disabled .rk-input,
+.rk-input:disabled {
+  background-color: #f4f4f5;
+  color: #71717a;
+  cursor: not-allowed;
+}
+
+/* Readonly */
+.rk-input[readonly] {
+  background-color: #fafafa;
+  color: #52525b;
+}
+
+/* Error */
+.rk-field.is-error .rk-input {
+  border-color: #dc2626;
+  box-shadow: 0 0 0 3px rgba(220,38,38,.15);
+}
+
+/* ---------------------------------------------------------
+   HELPER & ERROR TEXT
+--------------------------------------------------------- */
+.rk-helper {
+  font-size: 12px;
+  color: #71717a;
+}
+
+.rk-error {
+  font-size: 12px;
+  color: #dc2626;
+}
+
+/* ---------------------------------------------------------
+   INPUT WRAP (ICON / ACTION)
+--------------------------------------------------------- */
+.rk-input-wrap {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+/* Left icon */
+.rk-input__icon {
+  position: absolute;
+  left: 12px;
+  display: inline-flex;
+  align-items: center;
+  color: #71717a;
+  pointer-events: none;
+}
+
+/* Right action (password toggle, clear, etc) */
+.rk-input__action {
+  position: absolute;
+  right: 12px;
+  display: inline-flex;
+  align-items: center;
+
+  font-size: 12px;
+  color: #52525b;
+  cursor: pointer;
+  user-select: none;
+}
+
+/* Padding adjustment when icon exists */
+.rk-input-wrap .rk-input {
+  padding-left: 36px;
+}
+
+/* Padding adjustment when right action exists */
+.rk-input-wrap.has-action .rk-input {
+  padding-right: 36px;
+}
+
+/* Hover / focus feedback for action */
+.rk-input__action:hover {
+  color: #18181b;
+}
+
+/* ---------------------------------------------------------
+   TEXTAREA
+--------------------------------------------------------- */
+.rk-textarea {
+  width: 100%;
+  min-height: 96px;
+  padding: 8px 12px;
+
+  font-family: inherit;
+  font-size: inherit;
+  line-height: 1.4;
+
+  border-radius: 8px;
+  border: 1px solid #d4d4d8;
+  background-color: #ffffff;
+  color: #18181b;
+
+  resize: vertical;
+
+  transition:
+    border-color .15s ease,
+    box-shadow .15s ease,
+    background-color .15s ease;
+}
+
+.rk-textarea:focus {
+  outline: none;
+  border-color: #272727;
+  box-shadow: 0 0 0 3px rgba(39,39,39,.2);
+}
+
+/* Error */
+.rk-field.is-error .rk-textarea {
+  border-color: #dc2626;
+  box-shadow: 0 0 0 3px rgba(220,38,38,.15);
+}
+
+/* Disabled */
+.rk-textarea:disabled {
+  background-color: #f4f4f5;
+  color: #71717a;
+}
+
+/* ---------------------------------------------------------
+   SELECT
+--------------------------------------------------------- */
+.rk-select {
+  width: 100%;
+  height: 40px;
+  padding: 0 12px;
+
+  font-family: inherit;
+  font-size: inherit;
+
+  border-radius: 8px;
+  border: 1px solid #d4d4d8;
+  background-color: #ffffff;
+  color: #18181b;
+
+  appearance: none;
+
+  background-image:
+    linear-gradient(45deg, transparent 50%, #52525b 50%),
+    linear-gradient(135deg, #52525b 50%, transparent 50%);
+  background-position:
+    calc(100% - 18px) 50%,
+    calc(100% - 12px) 50%;
+  background-size: 6px 6px;
+  background-repeat: no-repeat;
+
+  transition:
+    border-color .15s ease,
+    box-shadow .15s ease;
+}
+
+.rk-select:focus {
+  outline: none;
+  border-color: #272727;
+  box-shadow: 0 0 0 3px rgba(39,39,39,.2);
+}
+
+/* Error */
+.rk-field.is-error .rk-select {
+  border-color: #dc2626;
+  box-shadow: 0 0 0 3px rgba(220,38,38,.15);
+}
+
+/* Disabled */
+.rk-select:disabled {
+  background-color: #f4f4f5;
+  color: #71717a;
+}
