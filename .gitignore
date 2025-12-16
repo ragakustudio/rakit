@@ -1,32 +1,24 @@
+# OS
 .DS_Store
 
-application/cache/*
-!application/cache/index.html
+# Node / Build
+node_modules/
+dist/
+.env
 
-application/logs/*
-!application/logs/index.html
+# Logs
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
 
-!application/*/.htaccess
+# IDE
+.idea/
+.vscode/
+.nbproject/
 
-composer.lock
-tests/mocks/database/ci_test.sqlite
-
-user_guide_src/build/*
-user_guide_src/cilexer/build/*
-user_guide_src/cilexer/dist/*
-user_guide_src/cilexer/pycilexer.egg-info/*
-/vendor/
-
-# IDE Files
-#-------------------------
-/nbproject/
-.idea/*
-
-## Sublime Text cache files
+# Editor cache
+*.sublime-workspace
+*.sublime-project
 *.tmlanguage.cache
 *.tmPreferences.cache
 *.stTheme.cache
-*.sublime-workspace
-*.sublime-project
-/tests/tests/
-/tests/results/
