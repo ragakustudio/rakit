@@ -1,0 +1,62 @@
+/* =========================================================
+   RAKIT TABLE — v0.1 FINAL
+   Fokus: readability, density, admin-grade
+   ========================================================= */
+
+.rk-table-wrap {
+  width: 100%;
+  overflow-x: auto;
+}
+
+/* Base table */
+.rk-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 14px;
+  color: #0f172a;
+}
+
+/* Cell */
+.rk-table th,
+.rk-table td {
+  padding: 8px 12px;              /* density dikunci */
+  text-align: left;
+  white-space: nowrap;
+}
+
+/* Header */
+.rk-table thead th {
+  font-weight: 600;
+  font-size: 12px;
+  color: #475569;
+  border-bottom: 1px solid #e5e7eb;
+}
+
+/* Body */
+.rk-table tbody td {
+  border-bottom: 1px solid #f1f5f9;
+}
+
+.rk-table tbody tr:hover {
+  background: #f8fafc;
+}
+
+/* Numeric */
+.rk-table .is-numeric {
+  text-align: right;
+  font-variant-numeric: tabular-nums;
+}
+
+/* Muted text (secondary info) */
+.rk-table .is-muted {
+  color: #64748b;
+  font-size: 13px;
+}
+
+/* Empty */
+.rk-table-empty {
+  padding: 24px;
+  text-align: center;
+  color: #64748b;
+  font-size: 14px;
+}
