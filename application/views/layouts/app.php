@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="id">
+
 <head>
   <meta charset="utf-8">
   <title><?= $title ?? 'RAKIT' ?></title>
@@ -8,6 +9,7 @@
   <!-- RAKIT CSS -->
   <link rel="stylesheet" href="<?= base_url('public/assets/rakit/rakit.css') ?>">
 </head>
+
 <body>
 
   <?= $this->load->view($layout, [], true); ?>
@@ -17,4 +19,5 @@
   <script src="<?= base_url('public/assets/rakit/rakit.js') ?>"></script>
 
 </body>
+
 </html>

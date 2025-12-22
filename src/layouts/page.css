@@ -1,0 +1,112 @@
+/* =========================================================
+   RAKIT PAGE LAYOUT — v1
+   Fokus: hierarchy, spacing, readability
+   ========================================================= */
+
+/* Page wrapper */
+.rk-page {
+  max-width: 1280px;
+  margin: 0 auto;
+}
+
+/* ===============================
+   PAGE HEADER
+================================ */
+
+.rk-page__header {
+  margin-bottom: 24px;
+}
+
+.rk-page__title {
+  font-size: 20px;
+  font-weight: 600;
+  line-height: 1.3;
+  color: #0f172a;
+}
+
+.rk-page__breadcrumb {
+  margin-top: 4px;
+  font-size: 13px;
+  color: #64748b;
+}
+
+/* ===============================
+   PAGE BODY
+================================ */
+
+.rk-page__body {
+  display: flex;
+  flex-direction: column;
+  gap: 24px; /* ritme utama halaman */
+}
+
+/* ===============================
+   SECTION BASE
+================================ */
+
+.rk-section {
+  background: #ffffff;
+  border-radius: 12px;
+  padding: 20px;
+}
+
+/* ===============================
+   SECTION HEADER
+================================ */
+
+.rk-section__header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 12px;
+}
+
+.rk-section__title {
+  font-size: 14px;
+  font-weight: 600;
+  color: #0f172a;
+}
+
+.rk-section__actions {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+/* ===============================
+   SECTION CONTENT
+================================ */
+
+.rk-section__content {
+  font-size: 14px;
+  color: #334155;
+}
+
+/* ===============================
+   SECTION VARIANTS (CONTEXT ONLY)
+================================ */
+
+/* Summary section biasanya lebih rapat */
+.rk-section--summary {
+  padding: 16px;
+}
+
+/* Visual section boleh lebih tinggi */
+.rk-section--visual {
+  padding: 24px;
+}
+
+/* ===============================
+   STATE BLOCK
+================================ */
+
+.rk-state {
+  padding: 24px;
+  text-align: center;
+  font-size: 14px;
+  color: #64748b;
+}
+
+.rk-state--error {
+  color: #b91c1c;
+}

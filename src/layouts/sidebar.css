@@ -1,0 +1,167 @@
+/* =========================================================
+   RAKIT SIDEBAR MENU — v1.1
+   ========================================================= */
+
+.rk-sidebar {
+  display: flex;
+  flex-direction: column;
+}
+
+/* ================= BRAND ================= */
+
+.rk-sidebar__brand {
+  height: 56px;
+  padding: 0 16px;
+  display: flex;
+  align-items: center;
+  font-weight: 600;
+  border-bottom: 1px solid #e5e7eb;
+  flex-shrink: 0;
+}
+
+/* ================= MENU WRAPPER ================= */
+
+.rk-sidebar__menu {
+  flex: 1;
+  padding: 16px 8px;
+  overflow-y: auto;
+  overflow-x: hidden;
+}
+
+/* Smooth scrollbar (optional tapi enak) */
+.rk-sidebar__menu::-webkit-scrollbar {
+  width: 6px;
+}
+.rk-sidebar__menu::-webkit-scrollbar-thumb {
+  background-color: rgba(0,0,0,0.15);
+  border-radius: 8px;
+}
+.rk-sidebar__menu::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.rk-sidebar__menu {
+  scrollbar-width: thin;
+  scrollbar-color: rgba(0,0,0,0.15) transparent;
+}
+
+/* Subtle scrollbar */
+.rk-sidebar__menu::-webkit-scrollbar {
+  width: 6px;
+}
+
+.rk-sidebar__menu::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.rk-sidebar__menu::-webkit-scrollbar-thumb {
+  background-color: rgba(0,0,0,0.15);
+  border-radius: 6px;
+}
+
+.rk-sidebar__menu:hover::-webkit-scrollbar-thumb {
+  background-color: rgba(0,0,0,0.3);
+}
+
+
+/* ================= MENU ================= */
+
+.rk-menu,
+.rk-menu__sub {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.rk-menu {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.rk-menu__item {}
+
+.rk-menu__link {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 8px 12px;
+  border-radius: 8px;
+  color: #0f172a;
+  font-size: 14px;
+  text-decoration: none;
+  transition: background-color 0.15s ease, padding 0.2s ease;
+}
+
+/* Active */
+.rk-menu__item.is-active > .rk-menu__link {
+  background-color: #f1f5f9;
+  font-weight: 600;
+}
+
+/* ================= SUBMENU ================= */
+
+.rk-menu__sub {
+  margin-top: 4px;
+  margin-left: 12px;
+  padding-left: 8px;
+  border-left: 1px solid #e5e7eb;
+  display: none;
+}
+
+.rk-menu__item.is-open > .rk-menu__sub {
+  display: block;
+}
+
+/* =========================================================
+   COLLAPSED SIDEBAR MODE
+   ========================================================= */
+
+.rk-app.is-sidebar-collapsed .rk-sidebar__brand {
+  justify-content: center;
+  font-weight: 700;
+}
+
+.rk-app.is-sidebar-collapsed .rk-menu__link {
+  justify-content: center;
+  padding: 12px 0;
+}
+
+.rk-app.is-sidebar-collapsed .rk-menu__link span:last-child {
+  display: none;
+}
+
+.rk-app.is-sidebar-collapsed .rk-menu__sub {
+  display: none;
+}
+
+.rk-app.is-sidebar-collapsed .rk-menu__item.is-active > .rk-menu__link {
+  background: transparent;
+}
+
+/* ================= TOOLTIP ================= */
+
+.rk-menu__link[data-tooltip] {
+  position: relative;
+}
+
+.rk-menu__link::after {
+  content: attr(data-tooltip);
+  position: absolute;
+  left: calc(100% + 12px);
+  top: 50%;
+  transform: translateY(-50%);
+  background: #0f172a;
+  color: #fff;
+  font-size: 12px;
+  padding: 6px 8px;
+  border-radius: 6px;
+  white-space: nowrap;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.15s ease;
+}
+
+.rk-app.is-sidebar-collapsed .rk-menu__link:hover::after {
+  opacity: 1;
+}

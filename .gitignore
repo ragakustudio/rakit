@@ -1,22 +1,38 @@
+# =========================
 # OS
+# =========================
 .DS_Store
+Thumbs.db
 
+# =========================
 # Node / Build
+# =========================
 node_modules/
 dist/
 .env
 
-# Logs
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
 
-# IDE
+# =========================
+# CodeIgniter runtime
+# =========================
+application/cache/*
+application/logs/*
+!application/cache/.gitkeep
+!application/logs/.gitkeep
+
+# =========================
+# IDE / Editor
+# =========================
 .idea/
 .vscode/
 .nbproject/
 
+# =========================
 # Editor cache
+# =========================
 *.sublime-workspace
 *.sublime-project
 *.tmlanguage.cache
