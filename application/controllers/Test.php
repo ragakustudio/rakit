@@ -9,7 +9,7 @@ class Test extends CI_Controller
     $data = [
       'title'  => 'RAKIT',
       'layout' => 'layouts/admin',
-      'page'   => 'pages/test_page',
+      'page'   => 'pages/dashboard',
     ];
 
     $this->load->view('layouts/app', $data);

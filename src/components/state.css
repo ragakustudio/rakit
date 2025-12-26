@@ -1,0 +1,29 @@
+/* =========================================================
+   RAKIT STATE — v0.1
+   Fokus: calm, neutral, non-blocking
+   ========================================================= */
+
+.rk-state {
+  padding: 24px;
+  text-align: center;
+  border: 1px dashed #e5e7eb;
+  border-radius: 12px;
+  background: #ffffff;
+}
+
+/* Empty */
+.rk-state--empty {
+  color: #64748b;
+}
+
+.rk-state__title {
+  font-size: 14px;
+  font-weight: 600;
+  color: #334155;
+  margin-bottom: 4px;
+}
+
+.rk-state__desc {
+  font-size: 13px;
+  color: #64748b;
+}

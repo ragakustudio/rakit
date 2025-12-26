@@ -1,7 +1,11 @@
 ## 1️⃣ Tujuan Dokumen
 
-### Dokumen ini mendefinisikan:
-- Struktur HTML konseptual halaman admin
+### Dokumen ini mendefinisikan kontrak struktur konten halaman admin di RAKIT.
+
+Kontrak ini:
+- Tidak bergantung framework
+- Tidak menentukan styling
+- Berlaku lintas produk Ragaku
 - Slot-slot wajib & opsional
 - Aturan penempatan konten
 
@@ -9,43 +13,23 @@
 
 Semua halaman admin Ragaku punya “tulang” yang sama.
 
-## 2️⃣ Struktur Dasar Halaman
+## 2️⃣ Struktur Konseptual Halaman
 
-<div class="rk-page">
+Page
+├─ PageHeader
+│  ├─ Title
+│  └─ Breadcrumb (opsional)
+│
+└─ PageBody
+   └─ Section (1 atau lebih)
 
-  <div class="rk-page__header">
-    <h1 class="rk-page__title">Page Title</h1>
-    <div class="rk-page__breadcrumb">Breadcrumb</div>
-  </div>
-
-  <div class="rk-page__body">
-
-  <section class="rk-section rk-section--summary">
-    <!-- Summary Metrics -->
-  </section>
-
-  <section class="rk-section rk-section--primary">
-    <!-- Primary Insights -->
-  </section>
-
-  <section class="rk-section rk-section--secondary">
-    <!-- Secondary Insights -->
-  </section>
-
-  <section class="rk-section rk-section--visual">
-    <!-- Chart (optional) -->
-  </section>
-
-  </div>
-
-</div>
 
 ### 📌 Catatan:
 
 - Header halaman ≠ Header global
 - Semua konten page harus berada di dalam .rk-page
 
-## 3️⃣ Page Header Slot
+## 3️⃣ Page Header
 
 ### 3.1 .rk-page__header
 
@@ -60,8 +44,8 @@ Isi wajib:
 
 Aturan:
 
-- Tidak boleh berisi action button
-- Tidak boleh scroll sendiri
+- PageHeader tidak digunakan untuk action agar konteks halaman tetap stabil.
+- Aksi halaman ditempatkan di dalam Section yang relevan.
 
 ### 3.2 .rk-page__title
 
@@ -75,7 +59,7 @@ Aturan:
 - Boleh disembunyikan jika tidak relevan
 - Tidak interaktif di MVP
 
-## 4️⃣ Page Body Slot
+## 4️⃣ Page Body
 
 ### 4.1 .rk-page__body
 
@@ -112,7 +96,7 @@ Modifier	                  Tujuan
 - rk-section--secondary	    Insight pendukung
 - rk-section--visual	      Chart / visual
 
-📌 Modifier tidak mengubah struktur, hanya konteks.
+📌 Modifier mendefinisikan peran semantik section, bukan tampilan visual.
 
 ### 6️⃣ Section Header Rules
 
@@ -133,7 +117,9 @@ Contoh tanpa header:
 
 ## 7️⃣ State Handling (Layout-level)
 
-State selalu ditampilkan di dalam section, bukan mengganti page.
+- State selalu ditampilkan di dalam section, bukan mengganti page.
+- State tidak pernah menggantikan Page atau Section, hanya mengisi kontennya.
+
 
 ### 7.1 Loading
 
@@ -177,3 +163,34 @@ Sebuah halaman dianggap valid secara RAKIT jika:
 - Menggunakan .rk-section
 - State ditampilkan di dalam section
 - Tidak ada hardcoded data
+
+## 1️⃣1️⃣ Contoh Implementasi (Referensi)
+
+<div class="rk-page">
+
+  <div class="rk-page__header">
+    <h1 class="rk-page__title">Page Title</h1>
+    <div class="rk-page__breadcrumb">Breadcrumb</div>
+  </div>
+
+  <div class="rk-page__body">
+
+  <section class="rk-section rk-section--summary">
+    <!-- Summary Metrics -->
+  </section>
+
+  <section class="rk-section rk-section--primary">
+    <!-- Primary Insights -->
+  </section>
+
+  <section class="rk-section rk-section--secondary">
+    <!-- Secondary Insights -->
+  </section>
+
+  <section class="rk-section rk-section--visual">
+    <!-- Chart (optional) -->
+  </section>
+
+  </div>
+
+</div>

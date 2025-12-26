@@ -1,0 +1,67 @@
+/* =========================================================
+   RAKIT METRIC — v0.1
+   Fokus: clarity, scanability, admin-grade
+   ========================================================= */
+
+.rk-metrics {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 16px;
+}
+
+/* Metric card */
+.rk-metric {
+  background: #ffffff;
+  border: 1px solid #e5e7eb;
+  border-radius: 12px;
+  padding: 16px;
+}
+
+/* Label */
+.rk-metric__label {
+  font-size: 12px;
+  font-weight: 500;
+  color: #64748b;
+  margin-bottom: 6px;
+}
+
+/* Value */
+.rk-metric__value {
+  font-size: 28px;
+  font-weight: 700;
+  line-height: 1.1;
+  color: #0f172a;
+}
+
+/* Meta (optional) */
+.rk-metric__meta {
+  margin-top: 6px;
+  font-size: 12px;
+  color: #94a3b8;
+}
+
+/* -------------------------------
+   States
+-------------------------------- */
+
+/* Loading */
+.rk-metric--loading {
+  border-style: dashed;
+}
+
+.rk-metric--loading .rk-skeleton--metric {
+  height: 36px;
+  border-radius: 8px;
+}
+
+/* Empty */
+.rk-metric--empty .rk-metric__value {
+  color: #94a3b8;
+}
+
+/* Error */
+.rk-metric--error {
+  border-color: #fecaca;
+  color: #991b1b;
+  font-size: 14px;
+}
