@@ -62,3 +62,5 @@ application/logs/*
 Homestead.json
 Homestead.yaml
 Thumbs.db
+/vendor
+.env
